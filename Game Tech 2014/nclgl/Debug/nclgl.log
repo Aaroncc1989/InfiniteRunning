@@ -1,0 +1,32 @@
+﻿生成启动时间为 2015/4/13 2:40:17。
+     1>项目“D:\Visual Studio 2013\Game Tech 2014\nclgl\nclgl.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Mesh.cpp
+         Mesh.cpp
+     1>d:\visual studio 2013\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Visual Studio 2013\Game Tech 2014\Game Technologies\Debug\nclgl.lib" /NOLOGO Debug\Camera.obj
+         Debug\CubeRobot.obj
+         Debug\Frustum.obj
+         Debug\GameTimer.obj
+         Debug\Keyboard.obj
+         Debug\Matrix4.obj
+         Debug\MD5Anim.obj
+         Debug\MD5FileData.obj
+         Debug\MD5Mesh.obj
+         Debug\MD5Node.obj
+         Debug\Mesh.obj
+         Debug\Mouse.obj
+         Debug\OBJMesh.obj
+         Debug\OGLRenderer.obj
+         Debug\Plane.obj
+         Debug\Quaternion.obj
+         Debug\SceneNode.obj
+         Debug\Shader.obj
+         Debug\Window.obj
+         nclgl.vcxproj -> D:\Visual Studio 2013\Game Tech 2014\Game Technologies\Debug\nclgl.lib
+     1>已完成生成项目“D:\Visual Studio 2013\Game Tech 2014\nclgl\nclgl.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.79
