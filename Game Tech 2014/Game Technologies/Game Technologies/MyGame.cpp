@@ -19,8 +19,11 @@ MyGame::MyGame()	{
 		SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS));
 	SetTextureRepeating(cube->GetTexture(), true);
 
-	GameEntity* quadEntity = BuildQuadEntity(5000.0f);
-	allEntities.push_back(quadEntity);
+	GameEntity* terrEntity = BuildTerrEntity(5000.0f, Vector3(0, 0, 0));
+	allEntities.push_back(terrEntity);
+	GameEntity* terrEntity1 = BuildTerrEntity(5000.0f, Vector3(0, 100, 10500));
+	allEntities.push_back(terrEntity1);
+
 	robot = BuildRobotEntity();
 	allEntities.push_back(robot);	
 }
@@ -39,9 +42,33 @@ void MyGame::UpdateGame(float msec) {
 		gameCamera->UpdateCamera(msec);
 	}
 
-	if (Window::GetKeyboard()->KeyTriggered(KEYBOARD_J))
+	if (Window::GetKeyboard()->KeyTriggered(KEYBOARD_I))
 	{
 		Vector3 tmpv = robot->GetPhysicsNode().GetLinearVelocity() + Vector3(0, 0.6, 0);
+		robot->GetPhysicsNode().SetLinearVelocity(tmpv);
+	}
+
+	if (Window::GetKeyboard()->KeyHeld(KEYBOARD_J))
+	{
+		Vector3 tmpv = robot->GetPhysicsNode().GetLinearVelocity() + Vector3(0.2, 0, 0);
+		robot->GetPhysicsNode().SetLinearVelocity(tmpv);
+	}
+	else
+	{
+		Vector3 tmpv = robot->GetPhysicsNode().GetLinearVelocity();
+		tmpv.x = 0;
+		robot->GetPhysicsNode().SetLinearVelocity(tmpv);
+	}
+
+	if (Window::GetKeyboard()->KeyHeld(KEYBOARD_L))
+	{
+		Vector3 tmpv = robot->GetPhysicsNode().GetLinearVelocity() + Vector3(-0.2, 0, 0);
+		robot->GetPhysicsNode().SetLinearVelocity(tmpv);
+	}
+	else
+	{
+		Vector3 tmpv = robot->GetPhysicsNode().GetLinearVelocity();
+		tmpv.x = 0;
 		robot->GetPhysicsNode().SetLinearVelocity(tmpv);
 	}
 
@@ -54,10 +81,10 @@ GameEntity* MyGame::BuildRobotEntity() {
 	SceneNode* s = new CubeRobot();
 	PhysicsNode* p = new PhysicsNode();
 	p->SetUseGravity(true);
-	p->SetPosition(Vector3(0,200,0));
+	p->SetPosition(Vector3(0,800,0));
 	p->SetLinearVelocity(Vector3(0, 0, 1));
 	p->SetInverseMass(1.f);
-	p->SetCollisionVolume(new CollisionAABB(Vector3(2,2,2)));
+	p->SetCollisionVolume(new CollisionAABB(Vector3(10, 10, 10)));
 	GameEntity* g = new GameEntity(s,p);
 	g->ConnectToSystems();
 	return g;
@@ -94,17 +121,16 @@ GameEntity* MyGame::BuildSphereEntity(float radius, Vector3 pos, Vector3 vel) {
 }
 
 
-GameEntity* MyGame::BuildQuadEntity(float size) {
+GameEntity* MyGame::BuildTerrEntity(float size, Vector3 pos) {
 	SceneNode* s = new SceneNode(cube);
-	s->SetModelScale(Vector3(500, 100, size));
+	s->SetModelScale(Vector3(500, 200, size));
 	s->SetBoundingRadius(size*5);
-	//s->SetColour(Vector4(0,0,0,1));
 	s->textureMatrix.SetScalingVector(Vector3(0.5, size/1000, 10));
 
 	PhysicsNode*p = new PhysicsNode(Quaternion::AxisAngleToQuaterion(Vector3(1, 0, 0), 0), Vector3());
 	p->SetUseGravity(false);
 	p->SetInverseMass(0.0f);
-	p->SetPosition(Vector3(0,0,size));
+	p->SetPosition(pos + Vector3(0, 0, size));
 	p->SetInverseInertia(InertialMatrixHelper::createImmovableInvInertial());
 	p->SetCollisionVolume(new CollisionAABB(s->GetModelScale()));
 	GameEntity*g = new GameEntity(s, p);
