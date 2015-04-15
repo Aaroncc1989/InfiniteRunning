@@ -1,11 +1,45 @@
-﻿生成启动时间为 2015/4/13 2:40:17。
-     1>项目“D:\Visual Studio 2013\Game Tech 2014\nclgl\nclgl.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2015/4/13 13:22:46。
+     1>项目“D:\GitHub\InfiniteRunning\Game Tech 2014\nclgl\nclgl.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Mesh.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D GLEW_STATIC /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp CubeRobot.cpp Frustum.cpp GameTimer.cpp Keyboard.cpp Matrix4.cpp MD5Anim.cpp MD5FileData.cpp MD5Mesh.cpp MD5Node.cpp Mesh.cpp Mouse.cpp OBJMesh.cpp OGLRenderer.cpp Plane.cpp Quaternion.cpp SceneNode.cpp Shader.cpp Window.cpp
+         Window.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         Shader.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         SceneNode.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         Quaternion.cpp
+         Plane.cpp
+         OGLRenderer.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         OBJMesh.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         Mouse.cpp
          Mesh.cpp
-     1>d:\visual studio 2013\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         MD5Node.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         MD5Mesh.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         MD5FileData.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         MD5Anim.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         Matrix4.cpp
+         Keyboard.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         GameTimer.cpp
+         Frustum.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         CubeRobot.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>d:\github\infiniterunning\game tech 2014\nclgl\cuberobot.cpp(33): warning C4305: “参数”: 从“double”到“const float”截断
+     1>d:\github\infiniterunning\game tech 2014\nclgl\cuberobot.cpp(44): warning C4305: “参数”: 从“double”到“const float”截断
+         Camera.cpp
+     1>d:\github\infiniterunning\game tech 2014\nclgl\keyboard.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         正在生成代码...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\Visual Studio 2013\Game Tech 2014\Game Technologies\Debug\nclgl.lib" /NOLOGO Debug\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"D:\GitHub\InfiniteRunning\Game Tech 2014\Game Technologies\Debug\nclgl.lib" /NOLOGO Debug\Camera.obj
          Debug\CubeRobot.obj
          Debug\Frustum.obj
          Debug\GameTimer.obj
@@ -24,9 +58,9 @@
          Debug\SceneNode.obj
          Debug\Shader.obj
          Debug\Window.obj
-         nclgl.vcxproj -> D:\Visual Studio 2013\Game Tech 2014\Game Technologies\Debug\nclgl.lib
-     1>已完成生成项目“D:\Visual Studio 2013\Game Tech 2014\nclgl\nclgl.vcxproj”(Build 个目标)的操作。
+         nclgl.vcxproj -> D:\GitHub\InfiniteRunning\Game Tech 2014\Game Technologies\Debug\nclgl.lib
+     1>已完成生成项目“D:\GitHub\InfiniteRunning\Game Tech 2014\nclgl\nclgl.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.79
+已用时间 00:00:13.95

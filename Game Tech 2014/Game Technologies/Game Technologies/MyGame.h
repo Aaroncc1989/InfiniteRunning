@@ -18,7 +18,7 @@ protected:
 
 	GameEntity* BuildSphereEntity(float radius, Vector3 pos, Vector3 vel);
 
-	GameEntity* BuildQuadEntity(float size);
+	GameEntity* BuildTerrEntity(float size,Vector3 pos);
 
 	void SetTextureRepeating(GLuint target, bool repeating);
 

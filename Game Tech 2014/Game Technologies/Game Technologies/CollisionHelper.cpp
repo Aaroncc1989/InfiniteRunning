@@ -99,11 +99,14 @@ void CollisionHelper::AABBCollisionImpulse(PhysicsNode& p0, PhysicsNode& p1)
 
 	if (abs(dist.z)>aa.getHalfDimensions().z)
 	{
-		float penetrate = aa.getHalfDimensions().z + bb.getHalfDimensions().z - abs(dist.z);
-		v.z = -1.f * penetrate;
+		//float penetrate = aa.getHalfDimensions().z + bb.getHalfDimensions().z - abs(dist.z);
+		v.z = 1.f * (dist.z/abs(dist.z));
+	}
+	if (abs(dist.y) > aa.getHalfDimensions().y)
+	{
+		v.y = 0.1f * (dist.y / abs(dist.y));
 	}
 	
-	v.y = 0.1f;
 	p1.SetLinearVelocity(v);
 }
 
